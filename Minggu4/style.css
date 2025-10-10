@@ -1,0 +1,69 @@
+/* File: style.css – dark mode rapi & penyesuaian visual */
+
+/* Tipografi & utilitas */
+*{
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+.object-fit-cover{ object-fit: cover; }
+
+/* Header semi-transparan (bekerja di light & dark) */
+.bg-translucent{
+  background-color: rgba(255,255,255,.8);
+}
+[data-bs-theme="dark"] .bg-translucent{
+  background-color: rgba(16,18,22,.65);
+}
+
+/* Backdrop blur untuk header */
+.backdrop-blur{
+  -webkit-backdrop-filter: saturate(140%) blur(8px);
+          backdrop-filter: saturate(140%) blur(8px);
+}
+
+/* Latar adaptif terhadap tema Bootstrap */
+body{
+  color: var(--bs-body-color);
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(61,181,161,.22), transparent),
+    radial-gradient(900px 500px at 100% 10%, rgba(13,110,253,.10), transparent),
+    var(--bs-body-bg);
+}
+
+/* Hero adaptif (border & gradient beda di dark) */
+.hero{
+  background: linear-gradient(135deg, rgba(13,110,253,.08), rgba(25,135,84,.10));
+  border: 1px solid rgba(0,0,0,.06);
+}
+[data-bs-theme="dark"] .hero{
+  background: linear-gradient(135deg, rgba(13,110,253,.12), rgba(32,201,151,.12));
+  border-color: rgba(255,255,255,.08);
+}
+
+/* Kartu terangkat saat hover */
+.card-raise{
+  transition: transform .2s ease, box-shadow .2s ease;
+  background-color: var(--bs-body-bg);
+}
+.card-raise:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 .5rem 1.25rem rgba(0,0,0,.12);
+}
+[data-bs-theme="dark"] .card-raise:hover{
+  box-shadow: 0 .5rem 1.25rem rgba(0,0,0,.4);
+}
+
+/* Brand dot gradasi */
+.brand-dot{
+  width: .8rem; height: .8rem; display:inline-block; border-radius: 999px;
+  background: linear-gradient(135deg, #0d6efd, #20c997);
+  box-shadow: 0 0 0 .15rem rgba(13,110,253,.15);
+}
+
+/* Justify paragraf */
+p{ text-align: justify; text-justify: inter-word; }
+
+/* Footer kontras saat dark */
+[data-bs-theme="dark"] footer{
+  background-color: #0b0d10 !important;
+  border-top-color: rgba(255,255,255,.08) !important;
+}

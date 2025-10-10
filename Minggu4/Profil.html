@@ -1,0 +1,173 @@
+<!-- File: Profil.html -->
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profil – Reza Eka Firmansyah</title>
+  <meta name="description" content="Profil singkat Reza Eka Firmansyah – Mahasiswa TI Telkom University Surabaya, minat jaringan komputer. Layout responsif Bootstrap: navbar, dua kolom, dan footer." />
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- Header / Navbar -->
+  <header class="border-bottom bg-translucent backdrop-blur sticky-top shadow-sm">
+    <nav class="navbar navbar-expand-lg container-lg py-2" aria-label="Navigasi utama">
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#">
+        <span class="brand-dot" aria-hidden="true"></span> RezaEF
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Buka navigasi">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#profil">Profil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#hobi">Hobi</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+          <li class="nav-item d-none d-lg-block ms-2">
+            <button id="themeToggle" class="btn btn-sm btn-outline-secondary" type="button" title="Toggle tema">🌙</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="container-lg my-4 my-md-5">
+    <div class="p-4 p-md-5 hero rounded-4 shadow-sm">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <h1 class="display-6 fw-semibold mb-2">
+            Halo, saya<br>
+            <span class="d-block fw-bold display-6">Reza Eka Firmansyah</span>
+          </h1>
+          <p class="lead mb-0">Mahasiswa S1 Teknologi Informasi – Telkom University Surabaya. Tertarik pada <span class="fw-semibold">jaringan komputer</span> dan terus mengasah keterampilan teknis.</p>
+        </div>
+        <div class="col-lg-5">
+          <div class="quick-links card border-0 shadow-sm">
+            <div class="card-body d-grid gap-2">
+              <a class="btn btn-primary" href="#profil">Lihat Profil</a>
+              <a class="btn btn-outline-success" href="#hobi">Lihat Hobi</a>
+              <a class="btn btn-outline-secondary" target="_blank" rel="noopener" href="https://instagram.com/refirmnnn">@refirmnnn</a>
+              <!-- Tombol WhatsApp -->
+              <a class="btn btn-success" target="_blank" rel="noopener" href="https://wa.me/6285730166078">WhatsApp Saya</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main: Dua Kolom -->
+  <main class="container-lg mb-5" id="profil">
+    <div class="row g-4">
+      <!-- Kolom Kiri: Profil & Sosial -->
+      <section class="col-12 col-md-6">
+        <article class="card h-100 shadow-sm card-raise">
+          <div class="card-body">
+            <h2 class="h4 card-title text-center mb-3">Tentang Saya</h2>
+            <p class="card-text">
+              Saya adalah mahasiswa S1 Program Studi Teknologi Informasi di Telkom University Kampus Surabaya.
+              Fokus minat saya adalah <strong>jaringan komputer</strong>, mulai dari dasar administrasi jaringan,
+              pengujian konektivitas, hingga penguatan keamanan di lingkungan kampus/lab.
+            </p>
+            <ul class="list-unstyled small text-muted mb-3">
+              <li class="mb-1">• Minat: routing & switching, dasar keamanan jaringan</li>
+              <li class="mb-1">• Lokasi: Surabaya, Indonesia</li>
+              <li>• Media sosial: <a class="link-primary" target="_blank" rel="noopener" href="https://instagram.com/refirmnnn">@refirmnnn</a></li>
+            </ul>
+            <!-- Link WhatsApp di profil -->
+            <a class="btn btn-success btn-sm" target="_blank" rel="noopener" href="https://wa.me/6285730166078">Hubungi via WhatsApp</a>
+          </div>
+          <div class="card-footer bg-transparent d-flex justify-content-between align-items-center">
+            <span class="text-muted small">Terakhir diperbarui <time id="updatedAt"></time></span>
+            <a href="#kontak" class="btn btn-outline-primary btn-sm">Kontak</a>
+          </div>
+        </article>
+      </section>
+
+      <!-- Kolom Kanan: Hobi (Logo Chelsea) -->
+      <section id="hobi" class="col-12 col-md-6">
+        <article class="card h-100 shadow-sm overflow-hidden card-raise">
+          <div class="ratio ratio-1x1">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg"
+              class="w-100 h-100 object-fit-cover p-4" alt="Logo Chelsea FC" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h2 class="h5 card-title">Hobi Saya</h2>
+            <p class="mb-0">Saya suka melihat tim sepak bola Chelsea.</p>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="kontak" class="mt-auto border-top bg-body-tertiary py-4">
+    <div class="container-lg d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3">
+      <div class="text-center text-sm-start">
+        <small class="text-muted">© <span id="year"></span> Reza Eka Firmansyah</small><br/>
+        <small class="text-muted">Dibuat dengan Bootstrap. Responsif untuk ponsel, tablet, dan desktop.</small>
+      </div>
+      <div class="d-flex flex-wrap gap-3">
+        <a href="#profil" class="link-secondary">Profil</a>
+        <a href="#hobi" class="link-secondary">Hobi</a>
+        <a href="https://instagram.com/refirmnnn" target="_blank" rel="noopener" class="link-secondary">Instagram</a>
+        <a href="https://wa.me/6285730166078" target="_blank" rel="noopener" class="link-secondary">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Tahun otomatis & tanggal update
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('updatedAt').textContent = new Date().toLocaleDateString('id-ID', { day: '2-digit', month: 'short', year: 'numeric' });
+
+    // Theme toggle (light/dark) menggunakan data-bs-theme
+    const toggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+
+    function setToggleIcon() {
+      const current = html.getAttribute('data-bs-theme') || 'light';
+      toggle.textContent = current === 'light' ? '🌙' : '☀️';
+    }
+    setToggleIcon();
+
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-bs-theme') || 'light';
+        const next = current === 'light' ? 'dark' : 'light';
+        html.setAttribute('data-bs-theme', next);
+        setToggleIcon();
+      });
+    }
+
+    // Smooth scroll untuk anchor
+    document.querySelectorAll('a[href^=\"#\"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Jika URL punya hash saat load, kembalikan ke atas agar tidak langsung lompat
+    window.addEventListener('load', () => {
+      if (location.hash) {
+        history.replaceState(null, '', location.pathname + location.search);
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      }
+    });
+  </script>
+</body>
+</html>
